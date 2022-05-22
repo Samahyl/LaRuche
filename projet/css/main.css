@@ -1,0 +1,890 @@
+:root {
+	--background-color: #B1B5C8;
+	--header-color: #BFD5E2;
+	--navigation-color: #B2ABBF;
+	--navigation-button: #d2e6cb;
+	--plus-color: #517047;
+
+	--url-bureau: url("../assets/img/laptop-1.jpg") center no-repeat;
+	--url-openspace: url("../assets/img/openspace.jpg") center no-repeat;
+	--url-conference:  url("../assets/img/conference.jpg") center no-repeat;
+}
+
+/** -- header_nav.php-- **/
+
+header {
+	text-align: center;
+	top: 0px;
+	position: relative;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0;
+	background-color: var(--header-color);
+	padding: 1rem;
+}
+
+#titre {
+	font-size: 2.5rem;
+	display: inline-flex;
+	color: black;
+	text-decoration: none;
+	letter-spacing: 5px;
+}
+
+#imgtitre {
+	width: 35px;
+	height: 35px;
+}
+
+body {
+	position: relative;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0;
+	background-color: var(--background-color);
+	/*min-height: 5000px;*/
+}
+
+.navigation {
+	top: 0;
+	position: sticky;
+	font-size: 20px;
+	list-style: none;
+	width: 100%;
+	border-top: 5px solid var(--navigation-button);
+	z-index: 9999;
+}
+
+.navigation > ul {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+	background-color: var(--navigation-color);
+}
+
+.navigation > ul > li > a {
+	float: left;
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+
+.navigation > ul > li > a:hover, .navigation > ul > li > a:focus{
+	background-color: var(--navigation-button);
+	border-radius: 15px 0 15px 0;
+}
+
+#login {
+	float: right;
+}
+
+/** -- Login.php & Signin.php-- **/
+
+form {
+	padding: 2rem 0 2rem 0;
+	margin: 5rem 25rem 0 25rem;
+	border: 2px solid var(--navigation-button);
+	background-color: var(--header-color);
+	border-radius: 5px;
+	text-align: center;
+}
+
+
+input[type=submit] {
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+	border: 2px solid black;
+	border-radius: 7px;
+	width: 70%;
+	transition: 0.5s;
+	background-color: var(--header-color);
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+	text-align: center;
+	padding: 10px;
+	margin: 5px;
+	border: 2px solid black;
+	border-radius: 7px;
+	width: 70%;
+	transition: 0.5s;
+	background-color: var(--header-color);
+}
+
+input:hover, input:focus {
+	background-color: white;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+	background-color: steelblue;
+	color: white;
+	font-weight: bold;
+}
+
+
+#signin {	
+	padding: 2rem 0 2rem 0;
+	margin: 5rem 25rem 0 25rem;
+	border: 2px solid var(--navigation-button);
+	background-color: var(--header-color);
+	border-radius: 5px;
+	text-align: center;
+}
+
+p#signin > a{
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+/** --profile.php -- **/
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+
+.profile_info {
+	text-align: center;
+	background-color: var(--header-color);
+	margin: 0 25% 0 25%;
+	padding: 1.5rem;
+	border: 2px solid var(--navigation-button);
+	border-radius: 5px;
+}
+
+.profile_info > ul{
+    padding: 0;
+    list-style-type: none; 
+}
+
+.profile_info > li {
+	list-style: none;
+}
+
+.gestion_global {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1rem;
+	margin: 10px;
+}
+
+.gestion {
+	border-radius: 5px;
+	border: 2px solid var(--navigation-button);
+	background-color: var(--header-color);
+	font-size: 30px;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	transition: 0.5s;
+}
+
+.gestion:hover,
+.gestion:focus {
+	box-shadow: 0 0 20px 1px grey;
+}
+
+/** --locate.php --**/
+
+
+#map {
+	padding: 2em;
+	top: 5rem;
+	border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  	height: 50em;
+  	width: 70em;
+  	z-index: 0;
+  	box-shadow: 0 0 60px 2px black;
+}
+
+/** --ext.php-- **/
+
+table {
+	width: 100%;
+	text-align: center;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th {
+    padding: 10px;
+    font-size: 25px;
+}
+
+td.pair {
+	background-color: var(--header-color);
+    padding: 10px;
+    font-size: 25px;
+}
+
+td.impair {
+	background-color: var(--navigation-button);
+    padding: 10px;
+    font-size: 25px;
+}
+
+/** -- reservation.php -- **/
+
+.carte_reservation {
+	background-color: var(--header-color);
+	padding: 1em;
+	border-radius: 3px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+}
+
+.carte {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.gauche_carte {
+	padding: 2em;
+	text-align: center;
+	border-radius: 3px 0 0 3px;
+	border-right: 1px solid var(--header-color);
+	position: relative;
+	margin-top: 1rem;
+	height: 30vw;
+}
+
+.bur {
+	background: var(--url-bureau);
+	background-size: cover;
+}
+
+.reu {
+	background: var(--url-openspace);
+	background-size: cover;
+}
+
+.conf {
+	background: var(--url-conference);
+	background-size: cover;
+}
+
+.none {
+	background-color: orange;
+}
+
+.gauche_carte > a {
+	font-size: 30px;
+	border-radius: 3px;
+	background-color: lightgoldenrodyellow;
+	color: black;
+	text-decoration: none;
+	padding: 1em;
+	border: 2px solid black;
+	transition: 0.5s;
+	top: 50%;
+	position: relative;
+	margin: 0;
+	box-shadow: 0 5px 15px 5px whitesmoke;
+	opacity: 0.8;
+}
+
+.gauche_carte > a:hover {
+	background-color: var(--navigation-button);
+	border: 2px solid var(--header-color);
+	opacity: 1;
+}
+
+.droite_carte {
+	background-color: var(--navigation-color);
+	padding: 2em;
+	border-radius: 0 3px 3px 0;
+	border-left: 1px solid var(--header-color);
+	margin-top: 1rem;
+}
+
+.droite_carte > a {
+	padding: 1em;
+}
+
+.selection_reserve {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	box-shadow: 0 0 15px 1px var(--background-color);
+}
+
+.selection_reserve > input[type=text] {
+	width: 30%;
+	text-align: left;
+}
+
+.selection_reserve > select {
+	width: fit-content;
+}
+
+.selection_reserve > input[type=submit] { 
+	width: 10%;
+	margin-right: 1em;
+}
+
+.selection_reserve > input[type=time],
+.selection_reserve > input[type=date] {
+	width: fit-content;
+}
+
+#selectionpeople {
+	transform: translateY(33.3%);
+}
+
+input[type=radio] {
+	transform: scale(1.4);
+}
+
+.divradio {
+	margin: 1rem;
+}
+
+/** -- emplacement.php -- **/
+
+input[type=date],
+input[type=time],
+select,
+input[type=range] {
+	background-color: var(--header-color);
+	padding: 1em;
+	border-radius: 5px;
+	border: 2px solid black;
+	font-size: 15px;
+	font-weight: bold;
+	transition: 0.5s;
+	width: 70%;
+	overflow: hidden;
+}
+
+input[type=date]:hover,
+input[type=time]:hover,
+input[type=date]:focus,
+input[type=time]:focus,
+select:hover,
+select:focus {
+	background-color: white;
+}  
+
+.emplacement_frame {
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	width: auto;
+	width: 100%;
+	margin: 0 auto ;
+	position: absolute;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+
+.l_panel {
+	/*background-color: red;*/
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	border-right: 2px solid var(--navigation-button);
+	padding: 1rem;
+}
+
+.r_panel {
+	padding: 1rem;
+	/*background-color: blue;*/
+}
+
+.emplacement_frame form {
+	display: block;
+	margin: 2rem;
+	width: inherit;
+}
+
+#plusbtn {
+	background-color: var(--header-color);
+	margin-top: 1em;
+	width: 70%;
+	border-radius: 3px;
+	border: 1px solid black;
+	transition: 0.5s;
+}
+
+#plusbtn:hover {
+	background-color: white;
+}
+
+.titreemplacement {
+	background-color: var(--header-color);
+	padding: 1rem;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 2px solid var(--navigation-button);
+	margin-top: 0;
+}
+
+.l_panel_titre {
+    background-color: var(--header-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid var(--navigation-button);
+    margin-top: 0;
+}
+
+.emplacement_img {
+	border-radius: 5px;
+	padding: 2em;
+	width: 25%;
+	height: auto;
+	aspect-ratio: 1/1;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.5;
+	transition: 0.2s;
+	border: 2px solid transparent;
+}
+
+.emplacement_img:hover {	
+	border: 2px solid var(--navigation-button);
+	opacity: 1;
+}
+
+.planning {
+	font-size: 20px;
+	margin-top: 1rem;
+	border-radius: 5px;
+ 	border-collapse: collapse;
+  	width: 100%;
+  	overflow: hidden;
+}
+
+.titre_planning {
+	background-color: #334;
+	color: white;
+}
+
+th {
+	background-color: var(--navigation-button);
+	color: #333;
+}
+
+.jourplan {
+	background: #ffdfd3;
+	border-bottom: 2px solid #333;
+	border-radius: 0;
+}
+
+td {
+	padding: 0.5rem;
+	background: skyblue;
+	/*border-radius: 15px;*/
+	overflow: hidden;
+}
+
+.occupe {
+	background: sandybrown;
+}
+
+.ndispo {
+	background: orangered;
+}
+
+.default {
+	background: transparent;
+}
+
+tr {
+	background: none;
+	border-bottom: 2px solid black;
+}
+
+.slider {
+	display: inline-block;
+}
+
+.err_div {
+	background-color: orange;
+	padding: 1rem;
+	margin: 2rem;
+	border-radius: 5px;
+	box-shadow: 0 0 20px 0 red;
+}
+
+#p_btn_c {
+	text-align: center;
+}
+
+#btn_calendar {
+	color: black;
+	text-decoration: none;
+	background-color: var(--navigation-button);
+	padding: 1em;
+	border-radius: 0 0 5px 5px;
+}
+
+/** -- gestion_r.php -- **/
+
+.affichage_reservations {
+	text-align: center;
+	background-color: var(--header-color);
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin: 0.5rem;
+	border-radius: 15px 0 15px 0;
+	font-size: 2rem;
+	padding: 0.5rem;
+	border: 2px solid black;
+	transition: 0.5s;
+}
+
+.affichage_reservations:hover,
+.affichage_reservations:focus {
+	background-color: white;
+}
+
+input[type=checkbox] {
+	transform: scale(1.5);
+	margin-left: 1rem;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.Pmodifetsup {
+	background-color: var(--background-color);
+	width: 70%;
+	margin: 5px auto 0 auto;
+	border-radius: 5px;
+	padding: 2px;
+	transition: 0.5s;
+}
+
+.modifetsup {
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+.Pmodifetsup:hover,
+.Pmodifetsup:focus {
+	background-color: var(--navigation-button);
+}
+
+.selection_r_admin {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.selection_r_admin > input[type=text] {
+	width: 30%;
+	text-align: left;
+}
+
+.selection_r_admin > select {
+	width: fit-content;
+}
+
+#btn_filtres {
+	text-decoration: none;
+	color: black;
+	padding: 1em;
+	background-color: var(--header-color);
+	border: 2px solid var(--navigation-button);
+	border-radius: 3px;
+}
+
+#btn_filtre {
+	margin: 2em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/** -- index.php -- **/
+
+.divinfos {
+	border-radius: 3px;
+	text-align: center;
+	justify-content: center;
+	background-color: var(--header-color);
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1rem;
+	margin: 1rem;
+	padding: 1rem;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#imgindex {
+	border: 3px solid var(--navigation-button);
+	border-radius: 3px;
+}
+
+#infoindex {
+	background-color: var(--navigation-button);
+	padding: 1em;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-top: auto;
+	margin-bottom: auto;
+	border-bottom: 3px solid var(--navigation-color);
+	border-radius: 3px;
+}
+
+p#infoindex > a {
+	color: black;
+}
+
+.up {
+	transform: scale(0.7);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: var(--navigation-button);
+	border-radius: 100px;
+	opacity: 0.7;
+	transition: 0.5s;
+	z-index: 900;
+}
+
+.up:hover, 
+.up:focus {
+	opacity: 1;
+	background-color: var(--header-color);
+}
+
+.publicactus {
+	/*box-shadow: 0px 5px 15px 0px black;*/
+	background-color: var(--header-color);
+	border-radius: 3px;
+	text-align: center;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	/*padding: 1em;*/
+	margin-top: 1rem;
+	overflow: hidden;
+}
+
+.publicactus > .titreactu {
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 0;
+	background-color: var(--navigation-button);
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 3px solid var(--navigation-color);
+}
+
+.soustitreactu {
+	float: left;
+	margin-left: 1rem;
+}
+
+.dateactu {
+	margin-left: 1rem;
+	float: left;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.texteactu {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 2rem;
+}
+
+/** -- footer.php -- **/
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: var(--header-color);
+	text-align: center;
+	margin-bottom: -10em;
+}
+
+/** -- self_reservation.php -- **/
+
+.reservation_perso {
+	background-color: var(--header-color);
+	border: 2px solid var(--navigation-button);
+	border-radius: 5px;
+	text-align: center;
+	font-size: 20px;
+	margin: 0.5rem;
+	padding: 1.5rem;
+}
+
+.reservation_perso > a {
+	text-decoration: none;
+	color: black;
+}
+
+/** -- actus.php -- **/
+
+textarea {
+	background-color: var(--header-color);
+	border-radius: 5px;
+	border: 2px solid black;
+	width: 71.5%;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+textarea:hover,
+textarea:focus {
+	background-color: white;
+}
+
+button#btn_actus {
+	padding: 1rem;
+	background-color: var(--header-color);
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+/** -- navplan.php -- **/
+
+#mainnav {
+	/*text-align: center;*/
+	background-color: #EA526F;
+	font-size: 40px;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 1em;
+	border-radius: 5px;
+	padding: 1em;
+	box-shadow: 0 0 10px 2px #FCEADE;
+	border: 2px solid #FCEADE;
+	font-weight: bold;
+}
+
+#mainnav > p {
+	margin: 0em;
+	padding: 0em;
+}
+
+#subnav {
+	background-color: #FF8A5B;
+	font-size: 20px;
+	border-radius: 5px;
+	padding: 1em;
+	margin: 1em;
+	border: 2px solid #FCEADE;
+	font-weight: normal;
+}
+
+#subnav > p.navtitles {
+	font-weight: bold;	
+	font-size: 25px;
+	margin-top: 0;
+}
+
+#subnav > div.contentnav {
+	background-color: cadetblue;
+	border-radius: 5px;
+	border: 2px solid #FCEADE;
+}
+
+#subnav > div.contentnav > p {
+	padding: 2em;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.edit_forms {
+	margin: auto auto 0 0;
+}
+
+.edit_forms_div {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	box-shadow: 0 0 15px -5px black inset;
+	border: 2px solid var(--navigation-button);
+	padding: 1em;
+	margin-bottom: 10px;
+}
+
+.edit_forms > form {
+	box-shadow: 0 0 25px -5px black;
+}
+
+.back_button_gestion {
+	padding-top: 2em;
+}
+
+.back_button_gestion > a {
+	text-decoration: none;
+	/*background-color: var(--navigation-button);*/
+	padding: 1em;
+	border-radius: 5px;
+	transition: 0.5s;
+	border: 0.5px solid var(--navigation-button);
+	color: black;
+}
+
+.back_button_gestion > a:hover,
+.back_button_gestion > a:focus {
+	box-shadow: 0 0 15px -2px black;
+}
+
+/** -- gestion_e.php -- **/
+
+.gestion_emplacement_container {
+	background-color: var(--header-color);
+	width: 70%;
+	margin: 0.5em;
+	margin-left: auto;
+	margin-right: auto;      
+	padding: 1em;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.gestion_emplacement_container:hover,
+.gestion_emplacement_container:focus {
+	background-color: white;
+	padding: 1.5rem;
+}
+
+.gestion_emplacement_container > a {
+	color: black;
+	text-decoration: none;
+}
+
+/** -- g_emplacement.php -- **/
+
+.description_para {
+	text-align: center;
+}
+
+.description_para > a {
+	text-decoration: none;
+	color: black;
+}
