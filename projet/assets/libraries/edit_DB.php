@@ -41,7 +41,7 @@
 					<input type="range" max="9" min="1" value="1" name="duree_after" name="date_before"oninput="this.nextElementSibling.value = this.value"><output>1
 						</output><a>h</a> -->
 					<!-- <input type="submit" name=""> -->
-					<p class="back_button_gestion"><a href="../../frames/gestion_r">Retour page de gestion</a></p>
+					<p class="back_button_gestion"><a href="../../frames/gestion_r.php">Retour page de gestion</a></p>
 				</form>
 			</div>
 		<?php
