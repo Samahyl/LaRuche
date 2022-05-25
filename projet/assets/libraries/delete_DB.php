@@ -16,9 +16,9 @@
 	if ($conn->query($sql) === TRUE) {
     	debug_to_console('Suppression réussie');
     	//echo $string."<br>".$sql;
-    	header("Location: ../../frames/gestion_r");
+    	header("Location: ../../frames/gestion_r.php");
 	} else {
 	 	debug_to_console("Erreur: " . $sql . "<br>");
-	 	header("Location:  ../../frames/gestion_r");
+	 	header("Location:  ../../frames/gestion_r.php");
 	}
 ?>
