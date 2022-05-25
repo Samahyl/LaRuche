@@ -6,5 +6,5 @@
 
 	echo $customsearch;
 
-	header('Location: ../../frames/gestion_r?customsearch='.$customsearch.'&colones='.$_GET['rowsdisplayed'].'');
+	header('Location: ../../frames/gestion_r.php?customsearch='.$customsearch.'&colones='.$_GET['rowsdisplayed'].'');
 ?>
