@@ -20,7 +20,7 @@
 			/*echo $row['id_reservation']."<br>";*/
 			?>
 				<div class="reservation_perso">
-					<a href="emplacement?id=<?php echo $link['id_emplacement'];?>">
+					<a href="emplacement.php?id=<?php echo $link['id_emplacement'];?>">
 						<strong>Emplacement : <?php echo $link['id_emplacement'];?></strong>
 					</a>
 					<br>
