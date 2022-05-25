@@ -31,11 +31,11 @@
 			$_SESSION['nom'] = $link['nom'];
 			$_SESSION['email'] = $link['email'];
 			$_SESSION['habitilation'] = $link['habilitation'];
-			header('Location: ../../frames/profile');
+			header('Location: ../../frames/profile.php');
 		}
 		elseif ($value != $link['mdphash']) {
 			echo "Mot de passe incorrecte <br>";
-			echo '<a href="../../frames/login">Réassayer</a>';
+			echo '<a href="../../frames/login.php">Réassayer</a>';
 		}			
 		else {
 			echo "Entrez votre mdp <br>";
