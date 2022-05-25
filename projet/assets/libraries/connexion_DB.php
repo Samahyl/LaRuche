@@ -3,7 +3,7 @@
 	$db = "projet";
 	$user = "root";
 	$pswd = "";
-	$host = "localhost:3307";
+	$host = "localhost:3307"; //3306 when not MariaDB
 	$port=3307;
 	try
 	{	
