@@ -3,8 +3,8 @@
 	$db = "projet";
 	$user = "root";
 	$pswd = "";
-	$host = "localhost:3307"; //3306 when not MariaDB
-	$port=3307;
+	//$host = "localhost:3307"; Utiliser le port 3306 sur le serveur
+	//$port=3307; Utiliser le port 3307 sur Wamp
 	try
 	{	
 		$conn = new PDO('mysql:host=localhost:3307;dbname=projet', $user, $pswd);

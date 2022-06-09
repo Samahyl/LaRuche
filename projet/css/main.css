@@ -888,3 +888,11 @@ button#btn_actus {
 	text-decoration: none;
 	color: black;
 }
+
+/** -- g_emplacement_form.php -- **/
+
+.preview_div {
+	margin-top: 2.5rem;
+	text-align: center;
+	font-weight: bold;
+}

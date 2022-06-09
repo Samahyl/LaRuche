@@ -2,6 +2,13 @@
 	session_start();
 	include_once "../assets/libraries/header_nav.php";
 	include_once "../assets/libraries/connexion_DB.php";
+	if (isset($_SESSION['prenom'])) {
+			debug_to_console('Connecté en tant que '.$_SESSION['prenom']." ".$_SESSION['nom'].' identifié : '.session_id());
+		}
+		else{
+			header("Location: /frames/login.php");
+			die();
+		}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +20,7 @@
 	<div class="carte_reservation">
 	<?php
 		if (!isset($_GET['customsearch'])) {
-			$sql = $conn->prepare("SELECT * FROM emplacements");
+			$sql = $conn->prepare("SELECT * FROM emplacements WHERE ouvert=1");
 			$sql->execute();
 			$result = $sql->fetchAll();
 		}
@@ -52,7 +59,7 @@
 			</div>
 			<input type="submit" name="submit" value="Recherche">
 		</form>
-		<p id="btn_filtre"><a href="reservation.php" id="btn_filtres">Retirer la selection par filtres</a></p>
+		<p id="btn_filtre"><a href="reservation" id="btn_filtres">Retirer la selection par filtres</a></p>
 		<?php
 
 		foreach ($result as $row => $link) {
@@ -65,24 +72,24 @@
 					<?php 
 					if (strpos($var_test, $var_b)!==false) {
 						echo "<div class='gauche_carte bur'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} elseif (strpos($var_test, $var_r)!==false) {
 						echo "<div class='gauche_carte reu'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} elseif (strpos($var_test, $var_c)!==false) {						
 						echo "<div class='gauche_carte conf'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} else {
 						echo "<div class='gauche_carte none'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					}
 					?>
 				<div class='droite_carte'>
-					
+					<?php echo $link['description'] ?>
 				</div>
 			</div>
 			<?php

@@ -19,6 +19,16 @@
 		<input id="submitbutton" type="submit" name="submit" value="Ok">
 		<!--<a>Mot de passe ou Login incorrect</a>-->
 	</form>
-	<p id="signin">Ou <a href="login.php">se connecter</a></p>
+	<?php
+		if (isset($_GET['error'])) {
+			if ($_GET['error'] == "em1") {
+				echo "<p style='text-align:center;color:red;'><strong>Email non valide !</strong></p>";
+			}
+			if ($_GET['error'] == "em2") {
+				echo "<p style='text-align:center;color:red;'><strong>Email déjà utilisée !</strong></p>";
+			}
+		}
+	?>
+	<p id="signin">Ou <a href="login">se connecter</a></p>
 </body>
 </html>

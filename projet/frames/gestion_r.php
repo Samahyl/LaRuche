@@ -32,13 +32,13 @@
 		</form>
 		<p id="btn_filtre"><a href="gestion_r" id="btn_filtres">Retirer la selection par filtres</a></p>
 
-		<form action="../assets/libraries/delete_DB.php" method="GET"><h1>Sélectionnez les réservations à effacer</h1><?php
+		<form action="../assets/libraries/delete_DB" method="GET"><h1>Sélectionnez les réservations à effacer</h1><?php
 		if (!isset($_GET['colones'])) {
 			foreach ($result as $row => $link) { 
 				echo "<div class='affichage_reservations'>
 						<a><strong>Client : ".$link['nom']." ".$link['prenom']."</strong><br>
 						Date : ".$link['date_reservation']." | Horaire : ".$link['horaire_reservation']." | Durée : ".$link['duree_reservation']."h
-						<a class='modifetsup' href='../assets/libraries/delete_DB.php?id_reservation=".$link['id_reservation']."' onclick='alert_suppr()''><p class='Pmodifetsup'>Supprimer</p></a><a class='modifetsup' href='../assets/libraries/edit_DB?id_reservation=".$link['id_reservation']."&id_client=".$link['id_client']."&date_reservation=".$link['date_reservation']."&horaire_reservation=".$link['horaire_reservation']."&duree_reservation=".$link['duree_reservation']."&id_emplacement=".$link['id_emplacement']."'><p class='Pmodifetsup'>Modifier</p></a></div>";
+						<a class='modifetsup' href='../assets/libraries/delete_DB?id_reservation=".$link['id_reservation']."' onclick='alert_suppr()''><p class='Pmodifetsup'>Supprimer</p></a><a class='modifetsup' href='../assets/libraries/edit_DB?id_reservation=".$link['id_reservation']."&id_client=".$link['id_client']."&date_reservation=".$link['date_reservation']."&horaire_reservation=".$link['horaire_reservation']."&duree_reservation=".$link['duree_reservation']."&id_emplacement=".$link['id_emplacement']."'><p class='Pmodifetsup'>Modifier</p></a></div>";
 			}
 		}
 		elseif (isset($_GET['colones'])) {
@@ -51,7 +51,7 @@
 				echo "<div class='affichage_reservations'>
 						<a><strong>Client : ".$link['nom']." ".$link['prenom']."</strong><br>
 						Date : ".$link['date_reservation']." | Horaire : ".$link['horaire_reservation']." | Durée : ".$link['duree_reservation']."h
-						<a class='modifetsup' href='../assets/libraries/delete_DB.php?id_reservation=".$link['id_reservation']."' onclick='alert_suppr()''><p class='Pmodifetsup'>Supprimer</p></a><a class='modifetsup' href='../assets/libraries/edit_DB?id_reservation=".$link['id_reservation']."&id_client=".$link['id_client']."&date_reservation=".$link['date_reservation']."&horaire_reservation=".$link['horaire_reservation']."&duree_reservation=".$link['duree_reservation']."&id_emplacement=".$link['id_emplacement']."'><p class='Pmodifetsup'>Modifier</p></a></div>";
+						<a class='modifetsup' href='../assets/libraries/delete_DB?id_reservation=".$link['id_reservation']."' onclick='alert_suppr()''><p class='Pmodifetsup'>Supprimer</p></a><a class='modifetsup' href='../assets/libraries/edit_DB?id_reservation=".$link['id_reservation']."&id_client=".$link['id_client']."&date_reservation=".$link['date_reservation']."&horaire_reservation=".$link['horaire_reservation']."&duree_reservation=".$link['duree_reservation']."&id_emplacement=".$link['id_emplacement']."'><p class='Pmodifetsup'>Modifier</p></a></div>";
 			}	
 			
 		}
@@ -64,7 +64,7 @@
 	}
 	else {
 		echo "<a>Accès non authorisé !</a><br>";
-		echo "<a href='profile.php'>RETOUR</a>";
+		echo "<a href='profile'>RETOUR</a>";
 	}
 	
 	include_once "../assets/libraries/footer.php";

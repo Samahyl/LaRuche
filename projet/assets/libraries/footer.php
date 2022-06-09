@@ -9,6 +9,6 @@
 </body>
 
 <footer>
-	<a href="../../frames/navplan.php">Plan du site</a>
+	<a href="../../frames/navplan">Plan du site</a>
 </footer>
 </html>

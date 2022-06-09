@@ -16,7 +16,7 @@
 </head>
 <body>
 	<table>
-    <thead>
+    <!--<thead>
     	<tr>
             <th colspan="3">Réservation</th>
        	</tr>
@@ -25,7 +25,7 @@
             <th colspan="1">Durée</th>
             <th colspan="1">Emplacement</th>
         </tr>
-    </thead>
+    </thead>-->
     <tbody>
     	<?php 
 

@@ -19,15 +19,22 @@
 	<div class="navigation">
 		<ul>
 			<li><a href="../../">Accueil</a></li>
-			<li><a href="../../frames/locate.php">Nous trouver</a></li>
-			<li><a href="../../frames/reservation.php">Réserver</a></li>
-			<li><a href="../../frames/about.php">A propos</a></li>
+			<li><a href="../../frames/locate">Nous trouver</a></li>
+			<li><a href="../../frames/reservation">Réserver</a></li>
+			<li><a href="../../frames/about">A propos</a></li>
 			<?php
 				if (isset($_SESSION['prenom'])) {
-					echo '<li><a id="login" href="../../frames/profile.php">Bonjour, '.$_SESSION['prenom'].'</a></li>';
+					?>
+					<li>
+						<a id="login" id href="../../frames/login">Se déconnecter</a>
+					</li>
+					<li>
+						<a id="login" href="../../frames/profile">Bonjour, <?php echo $_SESSION['prenom']?></a>
+					</li>
+					<?php
 				}
 				else{
-					echo '<li><a id="login" href="../../frames/login.php">Se connecter</a></li>';
+					echo '<li><a id="login" href="../../frames/login">Se connecter</a></li>';
 				}
 			?>
 		</ul>
@@ -50,10 +57,10 @@
 	$result = $sql->fetchAll();
 
 	if($host === 'projet/frames/emplacement?id=1') {
-	} elseif ($host === 'projet/frames/emplacement.php?id=2') {
-	} elseif ($host === 'projet/frames/emplacement.php?id=3') {
-	} elseif ($host === 'projet/frames/emplacement.php?id=4') {
-	} elseif ($host === 'projet/frames/emplacement.php?id=5') {
+	} elseif ($host === 'projet/frames/emplacement?id=2') {
+	} elseif ($host === 'projet/frames/emplacement?id=3') {
+	} elseif ($host === 'projet/frames/emplacement?id=4') {
+	} elseif ($host === 'projet/frames/emplacement?id=5') {
 	} else {
 	}
 ?>

@@ -12,14 +12,14 @@
 </head>
 <body>
 	<?php
-		if (isset($_SESSION['prenom'])) {
+		//if (isset($_SESSION['prenom'])) {
 			/*echo "<h1>Bonjour, ".$_SESSION['prenom']." !</h1>";*/
-			debug_to_console('Connecté en tant que '.$_SESSION['prenom']." ".$_SESSION['nom'].' identifié : '.session_id());
-		}
-		else{
-			header("Location: /frames/login.php");
-			die();
-		}
+			//debug_to_console('Connecté en tant que '.$_SESSION['prenom']." ".$_SESSION['nom'].' identifié : '.session_id());
+		//}
+		//else{
+			//header("Location: /frames/login");
+			//die();
+		//}
 	?>
 
 	<div class="up">
@@ -27,7 +27,7 @@
 	</div>
 	<div class="divinfos">
 		<img id='imgindex' src='assets/img/building.png'>
-		<p id='infoindex'><a href='frames/locate.php'>La Ruche - Rennes <br> 19 rue Louis Kérautret Botmel - 35000 Rennes</a></p>
+		<p id='infoindex'><a href='frames/locate'>La Ruche - Rennes <br> 19 rue Louis Kérautret Botmel - 35000 Rennes</a></p>
 		<!--<p id='infoindex'><a href="frames/about">En savoir plus</a></p>-->
 	</div>
 

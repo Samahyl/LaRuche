@@ -10,7 +10,7 @@
 	$result = $sql->fetchAll();
 
 	//var_dump($result);
-	echo "<h1>Description emplacement :</h1><p class='description_para';'><a>".$result[0][5]."</a><br><a href='g_emplacements_form.php'><strong>Modifier</strong></a></p>";
+	echo "<h1>Description emplacement :</h1><p class='description_para';'><a>".$result[0][5]."</a><br><a href='g_emplacement_form?id=".$_GET['id']."'><strong>Modifier</strong></a></p>";
 
 	echo "<h1>Réservations sur l'emplacement :</h1>";
 

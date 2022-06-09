@@ -11,7 +11,7 @@
 	}
 	else {
 		echo "<a>Accès non authorisé !</a><br>";
-		echo "<a href='profile.php'>RETOUR</a>";
+		echo "<a href='profile'>RETOUR</a>";
 	}
 
 	$sql = $conn->prepare("SELECT * FROM emplacements");
@@ -21,7 +21,7 @@
 	foreach ($result as $row => $link) { 
 		echo "
 			<div class='gestion_emplacement_container'>
-				<a href='g_emplacement.php?id=".$link['id_emplacement']."'>
+				<a href='g_emplacement?id=".$link['id_emplacement']."'>
 					<h1>".$link['emplacement']."</h1>
 				</a>
 			</div>

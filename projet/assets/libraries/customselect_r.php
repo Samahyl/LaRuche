@@ -34,5 +34,5 @@
 
 	$customsearch = "SELECT DISTINCT emplacements.* FROM emplacements,reservations WHERE ".$string." ORDER BY emplacements.id_emplacement ASC ";
 
-	header('Location: ../../frames/reservation?customsearch.php='.$customsearch.'');
+	header('Location: ../../frames/reservation?customsearch='.$customsearch.'');
 ?>

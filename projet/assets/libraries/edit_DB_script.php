@@ -18,9 +18,9 @@
 	$stmt = $conn->prepare($sql);
 	if ($stmt->execute($data) === TRUE) {
     	debug_to_console('Suppression réussie');
-    	header("Location: edit_DB.php?id_reservation_new=".$_POST['id_reservation']."");
+    	header("Location: edit_DB?id_reservation_new=".$_POST['id_reservation']."");
 	} else {
 	 	debug_to_console("Erreur: " . $sql . "<br>");
-	 	header("Location:  ../../frames/gestion_r.php");
+	 	header("Location:  ../../frames/gestion_r");
 	}
 ?>
