@@ -28,7 +28,7 @@
 	<div class="emplacement_frame"> <!-- concerne le contenu entier de la page au sein du corps en lui-meme -->
 		<div class="l_panel"> <!-- Partie gauche du contenu de la page -->
 			<p class="l_panel_titre">Réserver</p> <!-- sous bloc du panneau gauche -->
-			<?php echo "<form method='POST' action='../assets/libraries/reservation?id=".$_GET['id']."'>"?> <!-- création formulaire en HTML intégré en PHP -->
+			<?php echo "<form method='POST' action='../assets/libraries/reservation.php?id=".$_GET['id']."'>"?> <!-- création formulaire en HTML intégré en PHP -->
 				<a>Date :</a><br> <!-- Info relative au formulaire -->
 				<input type="date" name="reservationdate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"><br><br> <!-- Contenu du formulaire à remplir -->
 				<a>Arrivée : </a><br> <!-- Info relative au formulaire -->

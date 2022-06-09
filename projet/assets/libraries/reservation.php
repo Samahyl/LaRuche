@@ -85,7 +85,7 @@
 		if ($exec) {
 			echo "<br>true";
 	    	debug_to_console('Insertion réussie');
-	    	header("Location: ../../frames/reservation");
+	    	header("Location: ../../frames/reservation.php");
 		} else {
 			echo "false";
 			echo "Erreur: " . $sql . "<br>" . $conn->error;
@@ -94,6 +94,6 @@
 	}
 	else {
 		echo "Irréalisable";
-		header("Location: ../../frames/emplacement?id=".$_GET['id']."&err=true");
+		header("Location: ../../frames/emplacement.php?id=".$_GET['id']."&err=true");
 	}
 ?>

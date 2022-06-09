@@ -17,18 +17,18 @@
 		?><div class="gestion_global"><?php
 		if ($_SESSION['habitilation'] == 3) {
 			?>
-				<a class='gestion' href='gestion_e'>Gestion des espaces</a>
-				<a class='gestion' href='gestion_r'>Gestion des réservation</a>
-				<a class='gestion' href='actus'>Gestion des Actualités</a>
+				<a class='gestion' href='gestion_e.php'>Gestion des espaces</a>
+				<a class='gestion' href='gestion_r.php'>Gestion des réservation</a>
+				<a class='gestion' href='actus.php'>Gestion des Actualités</a>
 			<?php
 		}
 		elseif ($_SESSION['habitilation'] == 2) {
 			?>
-				<a class='gestion' href='actus'>Gestion des Actualités</a>
+				<a class='gestion' href='actus.php'>Gestion des Actualités</a>
 			<?php
 		}
 		?>
-			<a class='gestion' href='self_reservation'>Mes réservations</a>
+			<a class='gestion' href='self_reservation.php'>Mes réservations</a>
 		</div><?php
 	?>
 	<div class="profile_info">
