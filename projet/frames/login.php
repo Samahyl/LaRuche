@@ -7,7 +7,7 @@
 	}
 	include "../assets/libraries/header_nav.php"; //Intégration de mise en page + header HTML
 	include "../assets/libraries/connexion_DB.php"; //Intégration de connexion à la base de données
-	$lnk = "../../assets/libraries/action.php";
+	$lnk = "../../assets/libraries/action";
 ?>
 
 <!DOCTYPE html> <!-- Début fichier HTML -->
@@ -29,6 +29,6 @@
 		<input type="password" id ="password" name="password" placeholder="Mot de Passe" value=""> <!-- Champs de mot de passe  -->
 		<input id="submitbutton" type="submit" name="submit" value="Ok"> <!-- Envoie des données pour connexion -->
 	</form> <!-- Fin formulaire -->
-	<p id="signin">Ou <a href="../../frames/signin.php"><strong>s'inscrire</strong></a></p> <!-- Rédirection page d'inscription -->
+	<p id="signin">Ou <a href="../../frames/signin"><strong>s'inscrire</strong></a></p> <!-- Rédirection page d'inscription -->
 </body> <!-- Fin corps -->
 </html> <!-- Fin code HTML -->

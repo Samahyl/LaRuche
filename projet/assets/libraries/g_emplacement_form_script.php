@@ -55,9 +55,9 @@
 	$stmt = $conn->prepare($sql);
 	if ($stmt->execute($data) === TRUE) {
     	debug_to_console('Modification réussie');
-    	header("Location: ../../frames/g_emplacement_form.php?id=".$_GET['emp_id']."");
+    	header("Location: ../../frames/g_emplacement_form?id=".$_GET['emp_id']."");
 	} else {
 	 	debug_to_console("Erreur: " . $sql . "<br>");
-	 	header("Location: ../../frames/g_emplacement_form.php?id=".$_GET['emp_id']."");
+	 	header("Location: ../../frames/g_emplacement_form?id=".$_GET['emp_id']."");
 	}
 ?>

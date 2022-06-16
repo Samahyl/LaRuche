@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	include_once "../assets/libraries/header_nav.php";
+	include_once "../assets/libraries/connexion_DB.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,53 +12,28 @@
 </head>
 <body>
 	<h1>Plan du site</h1>
-	<div id="mainnav">
-		<p>Site</p>
-		<div id="subnav">
-			<p class="navtitles">Accueil</p>
-			<div class="contentnav">
-				<p></p>
-			</div>
-		</div>
-		<div id="subnav">
-			<p class="navtitles">Nous Trouver</p>
-			<div class="contentnav">
-				<p></p>
-			</div>
-		</div>
-		<div id="subnav">
-			<p class="navtitles">Réserver</p>
-			<div class="contentnav">
-				<p></p>
-			</div>
-		</div>
-		<div id="subnav">
-			<p class="navtitles">A Propos</p>
-			<div class="contentnav">
-				<p></p>
-			</div>
-		</div>
-		<div id="subnav">
-			<p class="navtitles">Mon Profil | Se connecter</p>
-			<div class="contentnav">
-				<?php
-					switch ($_SESSION['habitilation']) {
-						case 1:
-							echo "<p>Affichage n°1</p>";
-							break;
-						case 2:
-							echo "<p>Affichage n°2</p>";
-							break;
-						case 3:
-							echo "<p>Affichage n°3</p>";
-							break;
-						default:
-							echo "<p>Affichage n°0</p>";
-							break;
-					}
-				?>
-			</div>
-		</div>
+	<div class="mainnav">
+		<li>
+			<ul><a class="navtitle" href="../"><strong>Accueil</strong></a></ul>
+			<ul><a>Page d'accueil du site et actualités de La Ruche</a></ul>
+		</li>
+		<li>
+			<ul><a class="navtitle" href="locate.php"><strong>Nous trouver</strong></a></ul>
+			<ul><a>Affichage d'une carte interactive avec un marqueur pour situer La Ruche</a></ul>
+		</li>
+		<li>
+			<ul><a class="navtitle" href="reservation.php"><strong>Réserver</strong></a></ul>
+			<ul><a>&emsp;&emsp;Emplacements : Affichage des emplacements de co-working disponibles</a></ul>
+		</li>
+		<li>
+			<ul><a class="navtitle" href="about.php"><strong>A propos</strong></a></ul>
+			<ul><a>Affichage des informations sur La Ruche et le site</a></ul>
+		</li>
+	</div>
+	<div class="mainnav">
+		<li>
+			<ul><a class="navtitle" href="profile.php"><strong>Profil</strong></a></ul>
+		</li>
 	</div>
 </body>
 </html>

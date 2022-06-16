@@ -59,7 +59,7 @@
 			</div>
 			<input type="submit" name="submit" value="Recherche">
 		</form>
-		<p id="btn_filtre"><a href="reservation.php" id="btn_filtres">Retirer la selection par filtres</a></p>
+		<p id="btn_filtre"><a href="reservation" id="btn_filtres">Retirer la selection par filtres</a></p>
 		<?php
 
 		foreach ($result as $row => $link) {
@@ -72,19 +72,19 @@
 					<?php 
 					if (strpos($var_test, $var_b)!==false) {
 						echo "<div class='gauche_carte bur'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} elseif (strpos($var_test, $var_r)!==false) {
 						echo "<div class='gauche_carte reu'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} elseif (strpos($var_test, $var_c)!==false) {						
 						echo "<div class='gauche_carte conf'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					} else {
 						echo "<div class='gauche_carte none'>";
-							echo "<a href='emplacement.php?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
+							echo "<a href='emplacement?id=".$link['id_emplacement']."'>".$link['emplacement']."</a>";
 						echo "</div>";
 					}
 					?>

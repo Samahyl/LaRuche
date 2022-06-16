@@ -8,7 +8,7 @@
 		debug_to_console("Habitilation niveau : ".$_SESSION['habitilation'].", Administrateur");
 
 		if (!isset($_GET['customsearch'])) {
-			$sql = $conn->prepare("SELECT * FROM reservations,utilisateurs WHERE reservations.id_client=utilisateurs.id ORDER BY id_reservation ASC");
+			$sql = $conn->prepare("SELECT * FROM reservations,utilisateurs WHERE reservations.id_client=utilisateurs.id AND reservations.date_reservation > CURDATE() ORDER BY id_reservation ASC");
 			$sql->execute();
 			$result = $sql->fetchAll();
 		}
@@ -32,7 +32,7 @@
 		</form>
 		<p id="btn_filtre"><a href="gestion_r" id="btn_filtres">Retirer la selection par filtres</a></p>
 
-		<form action="../assets/libraries/delete_DB" method="GET"><h1>Sélectionnez les réservations à effacer</h1><?php
+		<form action="../assets/libraries/delete_DB" method="GET"><h1>Sélectionnez les réservations à modifier ou effacer</h1><?php
 		if (!isset($_GET['colones'])) {
 			foreach ($result as $row => $link) { 
 				echo "<div class='affichage_reservations'>
@@ -57,10 +57,6 @@
 		}
 
 		?></form><?php
-	}
-
-	elseif($_SESSION['habitilation']==1) {
-		debug_to_console("Habitilation niveau : ".$_SESSION['habitilation'].", Utilisateur");
 	}
 	else {
 		echo "<a>Accès non authorisé !</a><br>";

@@ -769,52 +769,36 @@ button#btn_actus {
 
 /** -- navplan.php -- **/
 
-#mainnav {
-	/*text-align: center;*/
-	background-color: #EA526F;
-	font-size: 40px;
-	width: 70%;
-	margin: 0 auto;
-	margin-top: 1em;
-	border-radius: 5px;
-	padding: 1em;
-	box-shadow: 0 0 10px 2px #FCEADE;
-	border: 2px solid #FCEADE;
-	font-weight: bold;
+.mainnav {
+	display: inline-flex;
 }
 
-#mainnav > p {
-	margin: 0em;
-	padding: 0em;
-}
-
-#subnav {
-	background-color: #FF8A5B;
-	font-size: 20px;
-	border-radius: 5px;
-	padding: 1em;
+.mainnav > li {
+	list-style-type: none;
+	background-color: var(--header-color);
 	margin: 1em;
-	border: 2px solid #FCEADE;
-	font-weight: normal;
+	overflow: visible;
+	border-radius: 0.5em;
 }
 
-#subnav > p.navtitles {
-	font-weight: bold;	
-	font-size: 25px;
+.mainnav > li > ul {
 	margin-top: 0;
-}
-
-#subnav > div.contentnav {
-	background-color: cadetblue;
-	border-radius: 5px;
-	border: 2px solid #FCEADE;
-}
-
-#subnav > div.contentnav > p {
-	padding: 2em;
+	padding: 0.5em;
 	padding-left: 0;
-	padding-right: 0;
+	padding-top: 0;
 }
+
+.mainnav > li > ul > a {
+	color: black;
+}
+
+.navtitle {
+	background-color: var(--navigation-button);
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+
+/** -- -- **/ 
 
 .edit_forms {
 	margin: auto auto 0 0;
